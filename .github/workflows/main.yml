@@ -23,7 +23,7 @@ jobs:
           git clone https://${{ secrets.gh_token }}@github.com/Dev-Voltaic/DragonBMS_BLE_Firmware.git
           cd DragonBMS_BLE_Firmware
           version=$(gh release list -L1 | awk -F'\t' '{print $3}')
-          cd..
+          cd ..
           echo $version
           echo $(ls)
           mkdir hex
