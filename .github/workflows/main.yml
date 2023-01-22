@@ -22,14 +22,9 @@ jobs:
           echo "${{ secrets.gh_token }}" | gh auth login --with-token
           git clone https://${{ secrets.gh_token }}@github.com/Dev-Voltaic/DragonBMS_BLE_Firmware.git
           cd DragonBMS_BLE_Firmware
-          rm -rf ./*
           version=$(gh release list -L1 | awk -F'\t' '{print $3}')
           echo $version
           echo $(ls)
-          gh release download --pattern '*.zip' $version
-          unzip \*.zip
-          rm -rf ./*.zip
-          cd $(ls | grep "DragonBMS")
           cd DragonBMS_BLE_Firmware/build/zephyr
           mv zephyr.hex firmware-$version.hex
           cd ..
