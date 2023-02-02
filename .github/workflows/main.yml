@@ -30,6 +30,6 @@ jobs:
           mv DragonBMS_BLE_Firmware/DragonBMS_BLE_Firmware/build/zephyr/* hex/
           rm -rf DragonBMS_BLE_Firmware
           cd hex
-          mv zephyr.hex firmware-$version.hex
+          mv zephyr.hex bms_fw-$version.hex
           cd ..
           gh release create $version ./hex/*
