@@ -13,3 +13,6 @@
 - Added serial number to board info
 - Added support for custom battery pack voltage range
 - Reliability improvements 
+
+## Changelog 0.1.0 -> 0.2.0
+- Implemented OTA ("Over The Air") updates
