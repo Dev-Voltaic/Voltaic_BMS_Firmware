@@ -27,9 +27,9 @@ jobs:
           echo $version
           echo $(ls)
           mkdir hex
-          mv DragonBMS_BLE_Firmware/DragonBMS_BLE_Firmware/build/zephyr/* hex/
+          mv DragonBMS_BLE_Firmware/DragonBMS_BLE_Firmware/build_release/zephyr/* hex/
           rm -rf DragonBMS_BLE_Firmware
           cd hex
-          mv zephyr.hex bms_fw-$version.hex
+          mv merged.hex bms_fw-$version.hex
           cd ..
           gh release create $version ./hex/*
