@@ -20,3 +20,6 @@
 ## Changelog 0.2.0 -> 0.2.1
 - Fixed issue where multiple BLE connections to the same BMS were possible under certain circumstances
 - Biggest possible shunt value takes enabled channels into account
+
+## Changelog 0.2.1 -> 0.2.2
+- Added automatic confirmation of OTA updates on BMS side
